@@ -1,0 +1,83 @@
+/* App Container */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 196vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #ffffff;
+  color: #fff;
+}
+
+/* Light Mode */
+.light-mode {
+  background-color: #000000;
+  color: #000;
+}
+
+/* Center Container */
+.center-container {
+  text-align: center;
+}
+
+/* Action Buttons */
+.action-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #f4d03f;
+  color: #000;
+  margin: 10px;
+}
+
+.action-button:hover {
+  background-color: #f1c40f;
+}
+
+/* Envelope Styles */
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #f4d03f;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid #f1c40f;
+  transition: transform 0.5s;
+}
+
+.envelope.open .flap {
+  transform: rotateX(180deg);
+}
+
+.letter {
+  position: relative;
+  bottom: 0;
+  width: 140%;
+  height: 330px;
+  background-color: rgb(224, 159, 159);
+  display: none;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.envelope.open .letter {
+  display: block;
+}
+
